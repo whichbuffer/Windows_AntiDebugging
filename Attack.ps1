@@ -2,5 +2,5 @@ IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/mas
 Install-AtomicRedTeam
 IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicsfolder.ps1' -UseBasicParsing);
 Install-AtomicsFolder
-Invoke-AtomicTest T1003  -Interactive
+Invoke-AtomicTest T1003.001  -Interactive
 
